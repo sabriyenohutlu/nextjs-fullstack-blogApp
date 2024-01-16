@@ -12,7 +12,7 @@ const CategoryList = () => {
           className={`${styles.category} ${styles.style}`}
         >
           <Image
-            src=""
+            src={""}
             alt=""
             width={32}
             height={32}
@@ -24,7 +24,7 @@ const CategoryList = () => {
           className={`${styles.category} ${styles.style}`}
         >
           <Image
-            src=""
+            src={""}
             alt=""
             width={32}
             height={32}
@@ -36,7 +36,7 @@ const CategoryList = () => {
           className={`${styles.category} ${styles.style}`}
         >
           <Image
-            src=""
+            src={""}
             alt=""
             width={32}
             height={32}

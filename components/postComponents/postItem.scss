@@ -1,0 +1,63 @@
+.podcastCard {
+    // gap: 1rem;
+    object-fit: contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 10px;
+  
+    &-img {
+      width: 100%;
+    }
+  
+    &-info {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 6rem;
+      background-color: rgba(0,0,0,.7);
+  
+      &__playBtn {
+          background-color: white;
+          border-radius: 50%;
+          width: 2.5rem;
+          position: absolute;
+          right: 0;
+          top: -20px;
+      }
+  
+      &__title {
+        width: 100%;
+        color: #f77a36;
+        font-size: 1rem;
+        display: flex;
+        align-items: flex-start;
+        padding: .5rem;
+      }
+      &__summary {
+        width: 100%;
+        color: #f77a36;
+        font-size: .9rem;
+        padding-left: .5rem;
+        box-sizing: border-box;
+        white-space: wrap;
+      }
+      &__mp3 {
+        width: 100%;
+        color: #f77a36;
+        font-size: .9rem;
+      }
+      &__speaker {
+        width: 100%;
+        color: white;
+        padding-left: .5rem;
+      }
+      &__publishedDate {
+          width: 100%;
+          color: #f77a36;
+      }
+    }
+  }
+  
