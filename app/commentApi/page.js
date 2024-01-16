@@ -1,6 +1,10 @@
 import FetchApi from "@/components/fetchApi/FetchApi";
 const CommenApi = async () => {
-  return <FetchApi />;
+
+  return (
+    <div>Comment</div>
+  )
+  // return <FetchApi />;
 };
 
 export default CommenApi;
