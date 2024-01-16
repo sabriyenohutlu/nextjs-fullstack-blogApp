@@ -1,6 +1,10 @@
 import Image from "next/image";
+import { fetchData } from "@/lib/action";
 import styles from "./featured.module.css";
-const Featured = () => {
+const Featured = async () => {
+
+  const dataList = await fetchData();
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>
@@ -9,7 +13,7 @@ const Featured = () => {
       </h1>
       <div className={styles.post}>
         <div className={styles.imgContainer}>
-          <Image src="/p1.jpeg" alt="" fill className={styles.image} />
+          <Image src={dataList[0].image} alt="" fill className={styles.image} />
         </div>
         <div className={styles.textContainer}>
           <h1 className={styles.postTitle}>

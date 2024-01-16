@@ -1,8 +1,12 @@
 import styles from "./comments.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import { fetchData } from "@/lib/action";
 
-const Comments = () => {
+const Comments = async() => {
+
+  const dataList = await fetchData();
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Comments</h1>
@@ -25,7 +29,7 @@ const Comments = () => {
                 <div className={styles.user}>
                   {/* {item?.user?.image && ( */}
                     <Image
-                      src={""}
+                      src={dataList[2].image}
                       alt=""
                       width={50}
                       height={50}

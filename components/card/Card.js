@@ -1,12 +1,16 @@
 import Link from "next/link";
 import styles from "./card.module.css";
 import Image from "next/image";
+import { fetchData } from "@/lib/action";
 
-const Card = () => {
+const Card = async () => {
+
+  const dataList = await fetchData();
+
   return (
     <div className={styles.container}>
       <div className={styles.imageContainer}>
-        <Image src={""} alt="" fill  className={styles.image}/>
+        <Image src={dataList[0].image} alt="" fill  className={styles.image}/>
       </div>
       <div className={styles.textContainer}>
         <div className={styles.detail}>

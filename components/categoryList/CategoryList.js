@@ -1,8 +1,12 @@
 import Link from "next/link";
 import styles from "./categoryList.module.css";
 import Image from "next/image";
+import { fetchData } from "@/lib/action";
 
-const CategoryList = () => {
+const CategoryList = async () => {
+
+  const dataList = await fetchData();
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Popular Categories</h1>
@@ -12,7 +16,7 @@ const CategoryList = () => {
           className={`${styles.category} ${styles.style}`}
         >
           <Image
-            src={""}
+            src={dataList[1].image}
             alt=""
             width={32}
             height={32}
@@ -24,7 +28,7 @@ const CategoryList = () => {
           className={`${styles.category} ${styles.style}`}
         >
           <Image
-            src={""}
+              src={dataList[1].image}
             alt=""
             width={32}
             height={32}
@@ -36,7 +40,7 @@ const CategoryList = () => {
           className={`${styles.category} ${styles.style}`}
         >
           <Image
-            src={""}
+              src={dataList[1].image}
             alt=""
             width={32}
             height={32}

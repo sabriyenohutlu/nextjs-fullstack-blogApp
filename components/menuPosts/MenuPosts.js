@@ -2,14 +2,18 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import styles from "./menuPosts.module.css"
+import { fetchData } from "@/lib/action";
 
-const MenuPosts = ({ withImage }) => {
+const MenuPosts = async ({ withImage }) => {
+
+  const dataList = await fetchData();
+
   return (
     <div className={styles.items}>
       <Link href="/" className={styles.item}>
         {withImage && (
           <div className={styles.imageContainer}>
-            <Image src={""} alt="" fill className={styles.image} />
+            <Image src={dataList[0].image} alt="" fill className={styles.image} />
           </div>
         )}
         <div className={styles.textContainer}>
@@ -26,7 +30,7 @@ const MenuPosts = ({ withImage }) => {
       <Link href="/" className={styles.item}>
         {withImage && (
           <div className={styles.imageContainer}>
-            <Image src={""} alt="" fill className={styles.image} />
+            <Image src={dataList[0].image} alt="" fill className={styles.image} />
           </div>
         )}
         <div className={styles.textContainer}>
@@ -45,7 +49,7 @@ const MenuPosts = ({ withImage }) => {
       <Link href="/" className={styles.item}>
         {withImage && (
           <div className={styles.imageContainer}>
-            <Image src={""} alt="" fill className={styles.image} />
+            <Image src={dataList[0].image} alt="" fill className={styles.image} />
           </div>
         )}
         <div className={styles.textContainer}>
@@ -62,7 +66,7 @@ const MenuPosts = ({ withImage }) => {
       <Link href="/" className={styles.item}>
         {withImage && (
           <div className={styles.imageContainer}>
-            <Image src={""} alt="" fill className={styles.image} />
+            <Image src={dataList[0].image} alt="" fill className={styles.image} />
           </div>
         )}
         <div className={styles.textContainer}>
