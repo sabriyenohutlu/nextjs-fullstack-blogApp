@@ -1,5 +1,5 @@
 "use client";
-import { createContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 export const ThemeContext = createContext();
 
@@ -25,3 +25,4 @@ export const ThemeContextProvider = ({ children }) => {
 
   return <ThemeContext.Provider value={{theme, toggle}}>{children}</ThemeContext.Provider>;
 };
+export const useThemeContext = () => useContext(ThemeContext)  

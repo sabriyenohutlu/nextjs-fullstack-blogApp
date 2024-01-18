@@ -1,0 +1,21 @@
+.ssrCompWrapper {
+    border: 1px solid red;
+    background-color: inherit;
+}
+.ssrList {
+    border: 1px solid blue;
+
+}
+.ssrListItem {
+    border: 1px solid gray;
+    background-color: inherit;
+    color: inherit;
+    width: 250px;
+    height: 100px;
+    text-align: center;
+    padding-top: 1rem;
+
+}
+.dark {
+    background-color: lightcoral;
+}
